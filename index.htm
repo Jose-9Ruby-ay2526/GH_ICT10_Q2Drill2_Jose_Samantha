@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <title>Volleyball Varsity Club</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0b1729, #142b4a, #243e60);
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .container {
+            background: #ffffff;
+            color: #142b4a;
+            width: 100%;
+            max-width: 460px;
+            padding: 35px;
+            border-radius: 18px;
+            border-top: 7px solid #f28c28;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .logo {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 15px;
+            background: #fff0df;
+            border: 3px solid #f28c28;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 43px;
+        }
+
+        .tag {
+            color: #f28c28;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 27px;
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            color: #718096;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin: 12px 0 28px;
+        }
+
+        .divider {
+            height: 3px;
+            width: 55px;
+            background: #f28c28;
+            margin: 0 auto 25px;
+            border-radius: 5px;
+        }
+
+        .form-title {
+            text-align: left;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .description {
+            color: #718096;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #dbe2ea;
+            background: #f7f9fc;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #f28c28;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(242, 140, 40, 0.15);
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 15px;
+            margin-top: 5px;
+            background: #142b4a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="button"]:hover {
+            background: #f28c28;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(242, 140, 40, 0.25);
+        }
+
+        #div1 {
+            margin-top: 20px;
+            padding: 14px;
+            border-radius: 8px;
+            background: #f0f5fa;
+            color: #142b4a;
+            font-size: 14px;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            margin-top: 28px;
+            padding-top: 18px;
+            border-top: 1px solid #e5eaf0;
+            font-size: 10px;
+            color: #8b98a9;
+            letter-spacing: 2px;
+        }
+
+        .footer-icon {
+            color: #f28c28;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .container {
+                padding: 28px 22px;
+            }
+
+            h1 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">🏐</div>
+
+        <div class="tag">TEAM • PASSION • DISCIPLINE</div>
+
+        <h1>VOLLEYBALL VARSITY</h1>
+
+        <p class="subtitle">OFFICIAL CLUB MEMBERSHIP</p>
+
+        <div class="divider"></div>
+
+        <p class="form-title">Player Membership Checker</p>
+
+        <p class="description">
+            Ready to be part of the team?
+            Enter your name below to check your membership status.
+        </p>
+
+        <form onsubmit="return false;">
+            <input
+                type="text"
+                id="fname"
+                placeholder="Enter your first name"
+                autocomplete="given-name"
+                required
+            >
+
+            <input
+                type="text"
+                id="lname"
+                placeholder="Enter your last name"
+                autocomplete="family-name"
+                required
+            >
+
+            <input
+                type="button"
+                py-click="get_name"
+                value="CHECK MEMBERSHIP  →"
+            >
+        </form>
+
+        <div id="div1"></div>
+
+        <footer>
+            <span class="footer-icon">🏐</span>
+            VOLLEYBALL VARSITY CLUB
+            <br><br>
+            PLAY WITH HEART. PLAY AS ONE.
+        </footer>
+
+    </div>
+
+    <script type="py" src="./main.py"></script>
+
+</body>
+</html>
